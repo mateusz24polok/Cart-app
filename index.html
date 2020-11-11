@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mateusz Polok">
+    <meta name="description" content="Cart app - recruitment task">
+    <meta name="keywords" content="cart, app, recruitment">
+    <meta property="og:image" content="images/appLogo.png">
+    <title>Cart</title>
+    <link href="images/favicon.png" rel="icon"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="appHeader">
+            <h3 class="appHeader__heading">Shopping Cart</h3>
+            <button class="appHeader__button">Proceed to checkout</button>
+        </header>
+        <main class="appMain">
+            <section class="productSection">
+                <p class="productSection__productNameTitle">Product Name</p>
+                <p class="productSection__priceUnitTitle">Unit Price</p>
+                <p class="productSection__quantityTitle">Qty</p>
+                <div class="productSection__firstBreakingLine"></div>
+                <button class="productSection__removeButton"></button>
+                <img class="productSection__productPicture" src="./images/headphones.png">
+                <p class="productSection__productTitle">Headphones</p>
+                <p class="productSection__productPrice">$11.90</p>
+                <div class="productSection__quantityCounter">
+                    <button class="productSection__quantityCounter__button">-</button>
+                    <output class="productSection__quantityCounter__output">2</output>
+                    <button class="productSection__quantityCounter__button">+</button>
+                    <button class="productSection__quantityCounter__editButton"></button>
+                </div>
+                <div class="productSection__secondBreakingLine"></div>
+                <button class="productSection__updateButton">Update Shopping Cart</button>
+            </section>
+            <aside class="purchaseSummary">
+                <div class="purchaseSummary__shippingSummary">
+                    <p class="purchaseSummary__shippingSummaryTitle">Shipping</p>
+                    <p class="purchaseSummary__shippingSummaryPrice">$23.80</p>
+                </div>
+                <div class="purchaseSummary__totalCarts">
+                    <p class="purchaseSummary__totalCartsTitle">Cart Totals</p>
+                    <div class="purchaseSummary_totalCartsDetails">
+                        <div class="purchaseSummary__totalCartsDetailsSubtotal">
+                            <p class="purchaseSummary__totalCartsDetailsSubtotalTitle">Subtotal</p>
+                            <p class="purchaseSummary__totalCartsDetailsSubtotalPrice">$23.80</p>
+                        </div>
+                        <div class="purchaseSummary__totalCartsDetailsGrandtotal">
+                            <p class="purchaseSummary__totalCartsDetailsGrandtotalTitle">Grand Total</p>
+                            <p class="purchaseSummary__totalCartsDetailsGrandtotalPrice">$23.80</p>
+                        </div>
+                        <button class="purchaseSummary__totalCartsDetailsSummaryButton">Proceed to checkout</button>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+</body>
+
+</html>
+
+<!-- grid-template-areas: ". . productNameTitle priceUnitTitle quantityTitle" 
+"firstBreakingLine firstBreakingLine firstBreakingLine firstBreakingLine firstBreakingLine" 
+"removeButton productPicture productTitle productPrice quantityCounter" 
+"secondBreakingLine secondBreakingLine secondBreakingLine secondBreakingLine secondBreakingLine" 
+". . . . updateButton"; -->

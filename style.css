@@ -1,0 +1,273 @@
+:root {
+    --textGray: gray;
+    --appSnuff: #E2D5E6;
+    --appWhisper: #F3EDF5;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 50px auto 0;
+}
+
+/* appHeader block styles */
+
+.appHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.appHeader__heading {
+    font-size: 24px;
+    color: var(--textGray);
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.appHeader__button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+.appHeader__button:hover {
+    background-color: rgb(60, 60, 60);
+}
+
+/* purchaseSummary block styles */
+
+.appMain {
+    display: flex;
+}
+
+/* productSection styles */
+
+.productSection {
+    display: grid;
+    grid-template-areas: ". . productNameTitle priceUnitTitle quantityTitle" "firstBreakingLine firstBreakingLine firstBreakingLine firstBreakingLine firstBreakingLine" "removeButton productPicture productTitle productPrice quantityCounter" "secondBreakingLine secondBreakingLine secondBreakingLine secondBreakingLine secondBreakingLine" ". . . . updateButton";
+    padding: 30px;
+    margin-right: 20px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    box-shadow: 1px 1px 7px -2px var(--textGray);
+}
+
+.productSection__productNameTitle {
+    grid-area: productNameTitle;
+    color: var(--textGray);
+    font-weight: 700;
+}
+
+.productSection__priceUnitTitle {
+    grid-area: priceUnitTitle;
+    color: var(--textGray);
+    font-weight: 700;
+}
+
+.productSection__quantityTitle {
+    grid-area: quantityTitle;
+    color: var(--textGray);
+    font-weight: 700;
+}
+
+.productSection__firstBreakingLine, .productSection__secondBreakingLine {
+    background-color: var(--textGray);
+    height: 2px;
+}
+
+.productSection__firstBreakingLine {
+    grid-area: firstBreakingLine;
+    margin-bottom: 50px;
+}
+
+.productSection__secondBreakingLine {
+    grid-area: secondBreakingLine;
+    margin-top: 50px;
+}
+
+.productSection__removeButton {
+    grid-area: removeButton;
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    background: url("./images/x-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+}
+
+.productSection__productPicture {
+    grid-area: productPicture;
+    align-self: center;
+}
+
+.productSection__productTitle {
+    grid-area: productTitle;
+    align-self: center;
+    color: var(--textGray);
+}
+
+.productSection__productPrice {
+    grid-area: productPrice;
+    align-self: center;
+    color: var(--textGray);
+}
+
+.productSection__quantityCounter {
+    grid-area: quantityCounter;
+    display: flex;
+    align-self: center;
+}
+
+.productSection__quantityCounter__button {
+    background-color: var(--appSnuff);
+    border: 1px solid var(--textGray);
+    color: var(--textGray);
+    font-weight: 700;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+.productSection__quantityCounter__button:hover {
+    background-color: var(--appWhisper);
+}
+
+
+.productSection__quantityCounter__output {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    color: var(--textGray);
+}
+
+.productSection__quantityCounter__editButton {
+    background: url("./images/edit-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.productSection__updateButton {
+    grid-area: updateButton;
+    color: white;
+    background-color: black;
+    margin: 10px 0 20px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: all 0.15s linear;
+}
+
+.productSection__updateButton:hover {
+    background-color: rgb(60, 60, 60);
+}
+
+/* purchaseSummary styles */
+
+.purchaseSummary__shippingSummary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: var(--appSnuff);
+    padding: 0 15px;
+    border: 1px solid var(--textGray);
+}
+
+.purchaseSummary__shippingSummaryTitle {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 0;
+}
+
+.purchaseSummary__shippingSummaryPrice {
+    font-weight: 700;
+}
+
+.purchaseSummary__totalCartsTitle {
+    text-transform: uppercase;
+    background-color: var(--appSnuff);
+    border: 1px solid var(--textGray);
+    padding: 10px 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.purchaseSummary_totalCartsDetails {
+    padding: 10px 15px 25px 15px;
+    background-color: var(--appWhisper);
+    border: 1px solid var(--textGray);
+    border-top: none;
+}
+
+.purchaseSummary__totalCartsDetailsSubtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--textGray);
+}
+
+.purchaseSummary__totalCartsDetailsSubtotalTitle {
+    padding-left: 5px;
+    font-weight: 700;
+    color: var(--textGray);
+}
+
+.purchaseSummary__totalCartsDetailsSubtotalPrice {
+    font-weight: 700;
+}
+
+.purchaseSummary__totalCartsDetailsGrandtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.purchaseSummary__totalCartsDetailsGrandtotalTitle {
+    padding-left: 5px;
+    font-weight: 700;
+    color: var(--textGray);
+}
+
+.purchaseSummary__totalCartsDetailsGrandtotalPrice {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.purchaseSummary__totalCartsDetailsSummaryButton {
+    color: white;
+    background-color: black;
+    padding: 10px 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+.purchaseSummary__totalCartsDetailsSummaryButton:hover {
+    background-color: rgb(60, 60, 60);
+}
